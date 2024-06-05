@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Svetovid</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        img {
+            max-width: 45%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .column p {
+            margin: 10px 0;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            margin-top: 10px;
+        }
+        header h1 {
+            font-weight: bold;
+            color: black; /* Set title color to black */
+        }
+        header a {
+            color: black; /* Set link color to black */
+            text-decoration: underline; /* Add underline to links */
+        }
+        .highlight {
+            font-weight: bold; /* Make text bold */
+        }
+        .output-link {
+            font-weight: bold; /* Make text bold */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Interface</h1>
+        <!-- Links to the Output's page and About Me -->
+        <a href="output.html" class="output-link" style="position: absolute; top: 10px; right: 10px; color: black; text-decoration: underline;">Output</a>
+        <a href="about.html" style="position: absolute; top: 40px; right: 10px; color: black; text-decoration: underline;" class="highlight">About Us</a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="column" id="left-column">
+                <h2>Upload Image</h2>
+                <p>Copy-paste URL link to the image or select an image file.</p>
+                <input type="text" id="image-url" placeholder="Paste image URL here" onkeydown="handleKeyDown(event, 'image-url')">
+                <p>Click the button to upload your file</p>
+                <input type="file" id="image-file" accept="image/*" style="display: none;" onchange="handleFileSelect(event, 'image-file')">
+                <button onclick="handleUpload('image')">Click Me</button>
+            </div>
+            <div class="column" id="center-column">
+                <h2>Upload Video</h2>
+                <p>Copy-paste URL link to the video or select a video file.</p>
+                <input type="text" id="video-url" placeholder="Paste video URL here" onkeydown="handleKeyDown(event, 'video-url')">
+                <p>Click the button to upload your file</p>
+                <input type="file" id="video-file" accept="video/*" style="display: none;" onchange="handleFileSelect(event, 'video-file')">
+                <button onclick="handleUpload('video')">Click Me</button>
+            </div>
+        </div>
+        <div class="container" id="live-feed-container">
+            <div class="column" id="right-column">
+                <h2>Start Live Feed</h2>
+                <p>Click the button to start the live feed from your system.</p>
+                <button onclick="startLiveFeed()" style="display: block; margin: 0 auto;">Click Me</button>
+                <video id="live-feed" autoplay></video>
+                <button id="record-btn" style="display: none; margin-top: 10px;" onclick="toggleRecording()">Start Recording</button>
+                <button id="stop-record-btn" style="display: none; margin-top: 10px;" onclick="stopRecording()">Stop Recording</button>
+                <a id="download-link" style="display: none; margin-top: 10px;" download="recording.mp4">Download Recording</a>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

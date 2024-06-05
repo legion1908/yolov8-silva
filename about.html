@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Svetovid</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        img {
+            max-width: 45%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .column p {
+            margin: 10px 0;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            margin-top: 10px;
+        }
+        header {
+            position: relative; /* Set header position to relative */
+        }
+        header h1 {
+            font-weight: bold;
+            color: black; /* Set title color to black */
+        }
+        header a {
+            color: black; /* Set link color to black */
+            text-decoration: underline; /* Add underline to links */
+        }
+        .highlight {
+            font-weight: bold; /* Make text bold */
+        }
+        .output-link {
+            font-weight: bold; /* Make text bold */
+        }
+        .back-link {
+            position: absolute; /* Set position to absolute */
+            top: 10px; /* Adjust top position */
+            right: 10px; /* Adjust right position */
+            color: black; /* Change link color to black */
+            text-decoration: underline; /* Add underline to link */
+            font-weight: bold; /* Make link bold */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Object Classification & Detection</h1>
+        <!-- Links to the Output's page and About Me -->
+        <a href="index.html" class="back-link"><strong>Go back to Input</strong></a> <!-- Internal link back to index.html -->
+    </header>
+    <main>
+        <div class="container">
+            <div class="column" id="left-column">
+                <h2>Project Lead</h2>
+                <p><strong>Project Lead/Software Integrator:</strong> Legion</p>
+            </div>
+            <div class="column" id="center-column">
+                <h2>Contributors</h2>
+                <p><strong>@skillnoob_ :</strong> Ultralytics Discord Server</p>
+                <p><strong>@mr.killz :</strong> Ultralytics Discord Server</p>
+                <p><strong>Akshay B. :</strong> Wyzant || Software Developer</p>
+                <p><strong>Leo J. :</strong> Software Developer</p>
+            </div>
+            <div class="column" id="right-column">
+                <h2>Assistant Programs</h2>
+                <p><strong>GPT 3.5:</strong> Front-End Development</p>
+                <p><strong>Co-pilot :</strong> Debugging process</p>
+            </div>
+        </div>
+        <!-- Live Video Feed Container -->
+        <div class="container" id="live-feed-container">
+            <div class="column">
+                <h2>The Goal of this project?</h2>
+                <p>This website was created to upload images, videos, and enable livestreaming. 
+                    The website should enable the user to classify objects in the image, detect objects in the image, and classify objects in the video.
+                    This should enable the user to utilize yolov without the need to install the software on their local machine.</p>
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

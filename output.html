@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Svetovid</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            position: relative; /* Set header position to relative */
+            text-align: center;
+        }
+
+        header h1 {
+            font-weight: bold;
+            color: black; /* Set title color to black */
+        }
+
+        .back-link {
+            position: absolute; /* Set position to absolute */
+            top: 10px; /* Adjust top position */
+            right: 10px; /* Adjust right position */
+            color: black; /* Change link color to black */
+            text-decoration: underline; /* Add underline to link */
+            font-weight: bold; /* Make link bold */
+        }
+        
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        
+        .column {
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            width: 80%;
+        }
+        
+        .column p {
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Classification Program Output</h1> <!-- Title within the white outline -->
+        <a href="index.html" class="back-link"><strong>Go back to Input</strong></a> <!-- Internal link back to index.html -->
+    </header>
+    <main>
+        <div class="container">
+            <div class="column">
+                <p id="classification-output"><strong>...Awaiting input for Data Classification...</strong></p> <!-- Bold text within the white outline -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>
